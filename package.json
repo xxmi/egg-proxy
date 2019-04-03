@@ -1,8 +1,7 @@
 {
-  "name": "@xxmi/egg-proxy",
-  "version": "1.0.0",
+  "name": "xxmi-egg-proxy",
+  "version": "0.0.1",
   "description": "proxy",
-  "private": true,
   "egg": {
     "declarations": true
   },
@@ -36,12 +35,17 @@
     "ci": "npm run lint && npm run cov",
     "autod": "autod"
   },
+  "files": [
+    "app",
+    "config",
+    "app.js"
+  ],
   "ci": {
     "version": "8"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/xxmi/egg-proxy.git"
   },
   "author": "xxmi.org",
   "license": "MIT"
