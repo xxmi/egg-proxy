@@ -8,14 +8,16 @@
 module.exports = () => {
   const config = {};
   config.xxmiEggProxy = {
-    host: 'http://127.0.0.1:8001/', // target host that matched path will be proxy to
-    match: /^\/api/, // path pattern.
-    map(path) {
-      if (this.match && this.match.test(path)) {
-        return path.replace(this.match, '');
-      }
-      return path;
-    },
+    host: 'http://127.0.0.1:8001/',
+    proxy: [
+      {
+        match: /^\/api/, // path pattern.
+      },
+      {
+        host: 'http://www.xxmi.cn/',
+        match: /^\/xxmi/, // path pattern.
+      },
+    ],
   };
   return config;
 };
