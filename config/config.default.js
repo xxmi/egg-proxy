@@ -10,6 +10,7 @@ module.exports = () => {
   config.xxmiEggProxy = {
     host: 'http://127.0.0.1:8001/',
     proxy: [
+      /^\/demo/,
       {
         match: /^\/api/, // path pattern.
       },
