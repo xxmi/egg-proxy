@@ -6,7 +6,7 @@ module.exports = app => {
 
   const xxmiProxy = app.config.xxmiEggProxy || {};
   if (xxmiProxy) {
-    const PLUGIN_NAME = 'xxmi-egg-proxy: ';
+    const PLUGIN_NAME = 'egg-xxmi-proxy: ';
     let proxyList = xxmiProxy.proxy || [];
     if (!Array.isArray(proxyList)) {
       proxyList = [].concat(proxyList);
@@ -29,7 +29,7 @@ module.exports = app => {
       }
       config.host = config.host ? config.host : xxmiProxy.host;
       if (!config.map) {
-        config.map = function(path) {
+        config.map = function (path) {
           if (this.match && this.match.test(path)) {
             return path.replace(this.match, '');
           }

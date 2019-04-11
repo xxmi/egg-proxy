@@ -1,7 +1,10 @@
 {
-  "name": "xxmi-egg-proxy",
-  "version": "0.0.3",
+  "name": "egg-xxmi-proxy",
+  "version": "0.0.1",
   "description": "proxy",
+  "eggPlugin": {
+    "name": "xxmiProxy"
+  },
   "egg": {
     "declarations": true
   },
